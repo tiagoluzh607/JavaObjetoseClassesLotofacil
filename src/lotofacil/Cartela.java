@@ -5,10 +5,23 @@
  */
 package lotofacil;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author tiago
  */
 public class Cartela {
     
+    private boolean apostaConcluida;
+    private ArrayList<Integer> numerosApostados;
+    
+    public Cartela(){
+        apostaConcluida = false;
+        numerosApostados =  new ArrayList<>();
+    }
+        
+    
+    
+            
 }
