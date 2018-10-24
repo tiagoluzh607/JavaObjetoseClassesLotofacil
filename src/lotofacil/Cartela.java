@@ -24,8 +24,14 @@ public class Cartela {
         return numerosApostados.size() >= 15;
     }
     
-    public void marcarNumero(int numero){
-        numerosApostados.add(numero);
+    public boolean marcarNumero(int numero){
+        
+        if(numerosApostados.contains(numero) || isApostaConcluida()){
+            return false;
+        }
+    
+        return numerosApostados.add(numero);
+        
     }
     
     
