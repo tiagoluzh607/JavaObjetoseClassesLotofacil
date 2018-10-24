@@ -13,14 +13,26 @@ import java.util.ArrayList;
  */
 public class Cartela {
     
-    private boolean apostaConcluida;
+
     private ArrayList<Integer> numerosApostados;
     
     public Cartela(){
-        apostaConcluida = false;
         numerosApostados =  new ArrayList<>();
     }
+
+    public boolean isApostaConcluida() {
         
+        if(numerosApostados.size() >= 15){
+            return true;
+        }else{
+            return false;
+        }
+        
+ 
+    }
+
+    
+    
     
     
             
