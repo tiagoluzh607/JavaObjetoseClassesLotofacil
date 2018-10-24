@@ -32,7 +32,8 @@ public class Lotofacil {
             System.out.println(marcouNumero?"Marcado\n\n":"Nao Foi Possivel Marcar Esse numero jah existe\n\n");
         }
         
-        
+        Loterica loterica = new Loterica();
+        loterica.sorteiaNumeros();
         
         //Sortear 15 numeros (de 1 a 25 sem repetir)
         //pegar apostas e comparar o resultado
