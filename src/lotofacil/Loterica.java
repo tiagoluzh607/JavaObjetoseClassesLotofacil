@@ -6,6 +6,7 @@
 package lotofacil;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 /**
  *
@@ -23,6 +24,12 @@ public class Loterica {
         return numerosSorteados.size() >= 15;
     }
     
+    public void sorteiaNumeros(){
+        Random gerador = new Random();
+        int numeroSorteado = gerador.nextInt(24);
+        numeroSorteado++;
+        //Como adicionar? não deve ter as mesmas validações que tem no método adicionar em cartela?
+    }
     
     
 }
