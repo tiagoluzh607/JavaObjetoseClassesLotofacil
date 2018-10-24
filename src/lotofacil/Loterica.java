@@ -25,11 +25,30 @@ public class Loterica {
     }
     
     public void sorteiaNumeros(){
-        Random gerador = new Random();
-        int numeroSorteado = gerador.nextInt(24);
-        numeroSorteado++;
-        //Como adicionar? não deve ter as mesmas validações que tem no método adicionar em cartela?
+        while(!isSorteioConcluido()){
+            Random gerador = new Random();
+            int numeroSorteado = gerador.nextInt(24);
+            numeroSorteado++;
+            marcarNumero(numeroSorteado);
+        }
     }
     
+    public boolean marcarNumero(int numero){
+        
+        if(numeroRepetido(numero) || isSorteioConcluido()|| numeroInvalido(numero)){
+            return false;
+        }
+    
+        return numerosSorteados.add(numero);
+        
+    }
+
+    private boolean numeroInvalido(int numero) {
+        return numero < 1 || numero > 25;
+    }
+
+    private boolean numeroRepetido(int numero) {
+        return numerosSorteados.contains(numero);
+    }
     
 }
