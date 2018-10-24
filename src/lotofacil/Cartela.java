@@ -27,5 +27,10 @@ public class Cartela extends RegraLotofacil{
     public boolean marcarNumero(int numero){
         return super.marcarNumero(numero, numerosApostados);
     }    
+
+    public ArrayList<Integer> getNumerosApostados() {
+        return numerosApostados;
+    }
             
+    
 }

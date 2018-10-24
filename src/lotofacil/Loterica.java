@@ -29,4 +29,16 @@ public class Loterica extends RegraLotofacil{
         }
     }
     
+    
+    public String resultado(Cartela cartela){
+        
+       //Pega lista da cartela
+       //pega lista de numeros sorteados
+       //verifica quantos numeros foram acertados
+       //faz uma pontuacao de acertos
+       
+       //Segundo a pontucao exibe a pontuacao em string
+       //segundo a pontuacao retorna o premio em string
+    }
+    
 }
