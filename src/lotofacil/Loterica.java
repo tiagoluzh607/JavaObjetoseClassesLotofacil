@@ -12,7 +12,7 @@ import java.util.Random;
  *
  * @author tiago
  */
-public class Loterica {
+public class Loterica extends RegraLotofacil{
     
     private ArrayList<Integer> numerosSorteados;
 
@@ -20,35 +20,13 @@ public class Loterica {
         this.numerosSorteados = new ArrayList<>();
     }
     
-    public boolean isSorteioConcluido(){
-        return numerosSorteados.size() >= 15;
-    }
-    
     public void sorteiaNumeros(){
-        while(!isSorteioConcluido()){
+        while(!super.isCartelaConcluida(numerosSorteados)){
             Random gerador = new Random();
             int numeroSorteado = gerador.nextInt(24);
             numeroSorteado++;
-            marcarNumero(numeroSorteado);
+            super.marcarNumero(numeroSorteado, numerosSorteados);
         }
-    }
-    
-    public boolean marcarNumero(int numero){
-        
-        if(numeroRepetido(numero) || isSorteioConcluido()|| numeroInvalido(numero)){
-            return false;
-        }
-    
-        return numerosSorteados.add(numero);
-        
-    }
-
-    private boolean numeroInvalido(int numero) {
-        return numero < 1 || numero > 25;
-    }
-
-    private boolean numeroRepetido(int numero) {
-        return numerosSorteados.contains(numero);
     }
     
 }
