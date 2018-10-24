@@ -26,10 +26,10 @@ public class Lotofacil {
         Cartela cartela = new Cartela();
         
         while(!cartela.isApostaConcluida()){
-            System.err.println("Digite um Número para a aposta");
+            System.out.println("Digite um Número para a aposta");
             int numero = teclado.nextInt();
-            //Adicionar numeros na cartela (15 numeros de 1 a 25 sem repetir)
-            
+            boolean marcouNumero = cartela.marcarNumero(numero);
+            System.out.println(marcouNumero?"Marcado\n\n":"Nao Foi Possivel Marcar Esse numero jah existe\n\n");
         }
         
         
