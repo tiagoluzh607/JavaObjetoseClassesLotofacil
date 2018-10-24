@@ -13,11 +13,11 @@ import java.util.ArrayList;
  */
 public class RegraLotofacil {
     
-    public boolean isCartelaConcluida(ArrayList<Integer> numeros) {   
+    protected boolean isCartelaConcluida(ArrayList<Integer> numeros) {   
         return numeros.size() >= 15;
     }
     
-    public boolean marcarNumero(int numero, ArrayList<Integer> numeros){
+    protected boolean marcarNumero(int numero, ArrayList<Integer> numeros){
         
         if(numeroRepetido(numero,numeros) || isCartelaConcluida(numeros)|| numeroInvalido(numero)){
             return false;
