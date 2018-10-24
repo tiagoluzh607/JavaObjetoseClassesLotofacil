@@ -20,15 +20,8 @@ public class Cartela {
         numerosApostados =  new ArrayList<>();
     }
 
-    public boolean isApostaConcluida() {
-        
-        if(numerosApostados.size() >= 15){
-            return true;
-        }else{
-            return false;
-        }
-        
- 
+    public boolean isApostaConcluida() {   
+        return numerosApostados.size() >= 15;
     }
 
     
