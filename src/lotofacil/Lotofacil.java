@@ -5,6 +5,8 @@
  */
 package lotofacil;
 
+import java.util.Scanner;
+
 /**
  *
  * @author tiago
@@ -15,7 +17,15 @@ public class Lotofacil {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println("ola  mundo");
+        
+        Scanner teclado = new Scanner(System.in);
+        
+        //Enquanto a Cartela não estiver concluida
+        //Adicionar numeros na cartela (15 numeros de 1 a 25 sem repetir)
+        
+        //Sortear 15 numeros (de 1 a 25 sem repetir)
+        //pegar apostas e comparar o resultado
+        //mostrar o resultado de cada aposta
                 
     }
     
