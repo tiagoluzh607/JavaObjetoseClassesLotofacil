@@ -26,13 +26,22 @@ public class Cartela {
     
     public boolean marcarNumero(int numero){
         
-        if(numerosApostados.contains(numero) || isApostaConcluida() || numero < 1 || numero > 25){
+        if(numeroRepetido(numero) || isApostaConcluida() || numeroInvalido(numero)){
             return false;
         }
     
         return numerosApostados.add(numero);
         
     }
+
+    private boolean numeroInvalido(int numero) {
+        return numero < 1 || numero > 25;
+    }
+
+    private boolean numeroRepetido(int numero) {
+        return numerosApostados.contains(numero);
+    }
+    
     
     
     
