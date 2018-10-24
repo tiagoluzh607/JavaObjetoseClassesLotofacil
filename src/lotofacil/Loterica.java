@@ -19,6 +19,10 @@ public class Loterica {
         this.numerosSorteados = new ArrayList<>();
     }
     
+    public boolean isSorteioConcluido(){
+        return numerosSorteados.size() >= 15;
+    }
+    
     
     
 }
