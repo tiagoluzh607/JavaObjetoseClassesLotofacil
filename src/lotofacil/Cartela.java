@@ -26,7 +26,7 @@ public class Cartela {
     
     public boolean marcarNumero(int numero){
         
-        if(numerosApostados.contains(numero) || isApostaConcluida()){
+        if(numerosApostados.contains(numero) || isApostaConcluida() || numero < 1 || numero > 25){
             return false;
         }
     
