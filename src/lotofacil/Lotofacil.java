@@ -39,6 +39,8 @@ public class Lotofacil {
         
         //pegar apostas e comparar o resultado
         //mostrar o resultado de cada aposta
+        String resultado = loterica.resultado(cartela);
+        System.out.println("\n\n####  "+ resultado + " ########\n\n");
                 
     }
     
