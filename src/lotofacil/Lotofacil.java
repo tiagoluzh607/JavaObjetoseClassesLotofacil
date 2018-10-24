@@ -28,10 +28,11 @@ public class Lotofacil {
         while(!cartela.isApostaConcluida()){
             System.err.println("Digite um Número para a aposta");
             int numero = teclado.nextInt();
+            //Adicionar numeros na cartela (15 numeros de 1 a 25 sem repetir)
             
         }
         
-        //Adicionar numeros na cartela (15 numeros de 1 a 25 sem repetir)
+        
         
         //Sortear 15 numeros (de 1 a 25 sem repetir)
         //pegar apostas e comparar o resultado

@@ -24,7 +24,9 @@ public class Cartela {
         return numerosApostados.size() >= 15;
     }
     
-
+    public void marcarNumero(int numero){
+        numerosApostados.add(numero);
+    }
     
     
     
