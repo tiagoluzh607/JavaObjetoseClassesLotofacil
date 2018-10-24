@@ -11,7 +11,7 @@ import java.util.ArrayList;
  *
  * @author tiago
  */
-public class Cartela {
+public class Cartela extends RegraLotofacil{
     
 
     private ArrayList<Integer> numerosApostados;
@@ -21,30 +21,11 @@ public class Cartela {
     }
 
     public boolean isApostaConcluida() {   
-        return numerosApostados.size() >= 15;
+        return super.isCartelaConcluida(numerosApostados);
     }
     
     public boolean marcarNumero(int numero){
-        
-        if(numeroRepetido(numero) || isApostaConcluida() || numeroInvalido(numero)){
-            return false;
-        }
-    
-        return numerosApostados.add(numero);
-        
-    }
-
-    private boolean numeroInvalido(int numero) {
-        return numero < 1 || numero > 25;
-    }
-
-    private boolean numeroRepetido(int numero) {
-        return numerosApostados.contains(numero);
-    }
-    
-    
-    
-    
-    
+        return super.marcarNumero(numero, numerosApostados);
+    }    
             
 }
