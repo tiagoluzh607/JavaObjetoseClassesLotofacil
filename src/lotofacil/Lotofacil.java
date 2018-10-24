@@ -20,7 +20,17 @@ public class Lotofacil {
         
         Scanner teclado = new Scanner(System.in);
         
+        System.out.println("##### Bem-vindo ao sistema Lotofácil!! ######");
         //Enquanto a Cartela não estiver concluida
+        
+        Cartela cartela = new Cartela();
+        
+        while(!cartela.isApostaConcluida()){
+            System.err.println("Digite um Número para a aposta");
+            int numero = teclado.nextInt();
+            
+        }
+        
         //Adicionar numeros na cartela (15 numeros de 1 a 25 sem repetir)
         
         //Sortear 15 numeros (de 1 a 25 sem repetir)

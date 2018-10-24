@@ -23,6 +23,7 @@ public class Cartela {
     public boolean isApostaConcluida() {   
         return numerosApostados.size() >= 15;
     }
+    
 
     
     
