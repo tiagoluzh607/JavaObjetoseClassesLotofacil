@@ -32,18 +32,12 @@ public class Loterica extends RegraLotofacil{
     
     public String resultado(Cartela cartela){
         
-        //Pega lista da cartela
-        ArrayList<Integer> numerosApostados = cartela.getNumerosApostados();
-                
-        //verifica quantos numeros foram acertados
         int acertos = 0;
-        
-        for (Integer numeroApostado : numerosApostados) {
-            if(numerosSorteados.contains(numeroApostado)){
-                acertos++;
-            }
-        }
-        
+        acertos = calculaNumeroDeAcertos(cartela, acertos);
+        return verificaPremiacao(acertos);
+    }
+
+    private String verificaPremiacao(int acertos) {
         //faz uma pontuacao de acertos
         //Segundo a pontucao exibe a pontuacao em string
         //segundo a pontuacao retorna o premio em string
@@ -67,9 +61,17 @@ public class Loterica extends RegraLotofacil{
             default:
                 return "Você acertou "+acertos+" Infelizmente não Ganhou Nada";
         }
-        
-        
+    }
 
+    private int calculaNumeroDeAcertos(Cartela cartela, int acertos) {
+        ArrayList<Integer> numerosApostados = cartela.getNumerosApostados();
+        //verifica quantos numeros foram acertados
+        for (Integer numeroApostado : numerosApostados) {
+            if(numerosSorteados.contains(numeroApostado)){
+                acertos++;
+            }
+        }
+        return acertos;
     }
     
 }
